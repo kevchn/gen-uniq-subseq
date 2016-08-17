@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>gen-uniq-subseq</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/skeleton.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h4>gen-uniq-subseq</h1>
+    </div>
+
+    <form method=post action="">
+      <table>
+        {% for field in form %}
+        <tr>
+          <td>{{ field.name }}</td><td>{{ field }}</td>
+          <td>{{ field.label }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <p><input type=submit value=Compute></p>
+    </form>
+
+    {% if result != None %}
+    <p>
+      {% for resulto in result %}
+      {{resulto}}
+      <br>
+      {% endfor %}
+    </p>
+    {% endif %}
+  </div>
+</body>
+
+</html>
