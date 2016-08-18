@@ -1,5 +1,4 @@
 from numpy import exp, cos, linspace
-import matplotlib.pyplot as plt
 import os, time, glob
 from Bio import SeqIO
 
@@ -19,7 +18,7 @@ def comp(a, b):
                 motif_set.add(motif)
             index_5p += 1
         results.append(">" + record.id + " " + motif)
-        results.append(record.seq)
+        results.append(record.seq.back_transcribe())
         results.append("pos:" + str(index_5p) + "-" + str(index_5p+10))
     handle.close()
     return(results)

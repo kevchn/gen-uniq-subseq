@@ -1,6 +1,7 @@
 from model import InputForm
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from compute import comp
+import csv, io
 
 app = Flask(__name__)
 
