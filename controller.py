@@ -16,6 +16,10 @@ def index():
 
     return render_template('view.html', form=form, result=result)
 
+@app.route('/all_mirna')
+def all_mirna():
+    return render_template('all_mirna.html')
+
 if __name__ == '__main__':
      app.debug = True
      port = int(os.environ.get("PORT", 5000))

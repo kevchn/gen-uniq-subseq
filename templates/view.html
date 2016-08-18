@@ -21,14 +21,13 @@
     </div>
 
     <form method=post action="">
-        {% for field in form %}
-        <div class="row">
-          <div class="eight columns">
-            <label>{{ field.label }}</label>
-            {{ field }}
-          </div>
-        </div>
-        {% endfor %}
+      {% for field in form %}
+      <div class="row">
+          <label>{{ field.label }}</label>
+          {{ field }}
+      </div>
+      {% endfor %}
+      <p><a href="/all_mirna">List of all miRNA</a></p>
       <p><input type=submit value=Generate></p>
     </form>
 
