@@ -15,19 +15,20 @@
 
 <body>
   <div class="container">
+
     <div class="row">
       <h4>gen-uniq-subseq</h1>
     </div>
 
     <form method=post action="">
-      <table>
         {% for field in form %}
-        <tr>
-          <td>{{ field.name }}</td><td>{{ field }}</td>
-          <td>{{ field.label }}</td>
-        </tr>
+        <div class="row">
+          <div class="eight columns">
+            <label>{{ field.label }}</label>
+            {{ field }}
+          </div>
+        </div>
         {% endfor %}
-      </table>
       <p><input type=submit value=Generate></p>
     </form>
 
@@ -39,6 +40,7 @@
       {% endfor %}
     </p>
     {% endif %}
+
   </div>
 </body>
 

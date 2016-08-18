@@ -2,13 +2,13 @@ from wtforms import Form, IntegerField, TextAreaField, validators
 
 class InputForm(Form):
     index_5p = IntegerField(
-        label='1-based index where motif starts from 5p side (nt)', default=3,
+        label='5p Index (1-based)', default=3,
         validators=[validators.InputRequired()])
     motif_size = IntegerField(
-        label='size of motif (nt)', default=10,
+        label='Motif Size', default=10,
         validators=[validators.InputRequired()])
     mirna_list = TextAreaField(
-        label='which mirnas to include in search; put each mirna on new line',
+        label='miRNA List',
         default=
 "hsa-let-7f-5p\n\
 hsa-let-7i-5p\n\

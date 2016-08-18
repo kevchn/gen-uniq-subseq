@@ -9,7 +9,7 @@ def comp(a, b, c):
     motif_set = set()
     handle = open("data/sorted.human.mature.fa", "rU")
     for record in SeqIO.parse(handle, "fasta"):
-        if record.id in mirna_set:
+        if record.id in mirna_set: # check if db mirna is one in user input
             index_5p = a-1
             flag_motif_unique = False
             motif = ""
