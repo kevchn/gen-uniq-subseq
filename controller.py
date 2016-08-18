@@ -1,7 +1,7 @@
 from model import InputForm
 from flask import Flask, render_template, request, Response
 from compute import comp
-import csv, io
+import csv, io, os
 
 app = Flask(__name__)
 
@@ -16,4 +16,6 @@ def index():
     return render_template('view.html', form=form, result=result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+     app.debug = True
+     port = int(os.environ.get("PORT", 5000))
+     app.run(host='0.0.0.0', port=port)
