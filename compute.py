@@ -17,11 +17,13 @@ def comp(a, b):
                 flag_motif_unique = True
                 motif_set.add(motif)
             index_5p += 1
-        results.append(">" + record.id + " " + motif)
+        pos = "pos:" + str(index_5p) + "-" + str(index_5p+10)
+        results.append(">" + record.id + " " + motif + " " + pos)
         results.append(record.seq.back_transcribe())
-        results.append("pos:" + str(index_5p) + "-" + str(index_5p+10))
     handle.close()
     return(results)
 
 if __name__ == '__main__':
-    print(comp(1, 0.1, 1, 20))
+     app.debug = True
+     port = int(os.environ.get("PORT", 5000))
+     app.run(host='0.0.0.0', port=port)
