@@ -9,7 +9,8 @@ app = Flask(__name__)
 def index():
     form = InputForm(request.form)
     if request.method == 'POST' and form.validate():
-        result = comp(form.index_5p.data, form.motif_size.data)
+        result = comp(form.index_5p.data, form.motif_size.data,
+                      form.mirna_list)
     else:
         result = None
 

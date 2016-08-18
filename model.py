@@ -1,4 +1,4 @@
-from wtforms import Form, IntegerField, validators
+from wtforms import Form, IntegerField, TextAreaField, validators
 
 class InputForm(Form):
     index_5p = IntegerField(
@@ -6,4 +6,116 @@ class InputForm(Form):
         validators=[validators.InputRequired()])
     motif_size = IntegerField(
         label='size of motif (nt)', default=10,
+        validators=[validators.InputRequired()])
+    mirna_list = TextAreaField(
+        label='which mirnas to include in search; put each mirna on new line',
+        default=
+"hsa-let-7f-5p\n\
+hsa-let-7i-5p\n\
+hsa-miR-21-5p\n\
+hsa-miR-148a-3p\n\
+hsa-let-7g-5p\n\
+hsa-miR-100-5p\n\
+hsa-miR-92a-3p\n\
+hsa-miR-27b-3p\n\
+hsa-let-7a-5p\n\
+hsa-miR-27a-3p\n\
+hsa-miR-99a-5p\n\
+hsa-miR-26a-5p\n\
+hsa-miR-10a-5p\n\
+hsa-miR-24-3p\n\
+hsa-miR-151a-3p\n\
+hsa-miR-25-3p\n\
+hsa-miR-99b-5p\n\
+hsa-miR-20a-5p\n\
+hsa-miR-148b-3p\n\
+hsa-miR-191-5p\n\
+hsa-miR-103a-3p\n\
+hsa-miR-128-3p\n\
+hsa-miR-30c-5p\n\
+hsa-miR-182-5p\n\
+hsa-miR-423-3p\n\
+hsa-miR-378a-3p\n\
+hsa-miR-582-3p\n\
+hsa-let-7b-5p\n\
+hsa-miR-10b-5p\n\
+hsa-miR-17-5p\n\
+hsa-miR-30a-5p\n\
+hsa-miR-92b-3p\n\
+hsa-miR-30a-3p\n\
+hsa-miR-23a-3p\n\
+hsa-miR-98-5p\n\
+hsa-let-7c-5p\n\
+hsa-miR-93-5p\n\
+hsa-miR-186-5p\n\
+hsa-miR-30d-5p\n\
+hsa-miR-183-5p\n\
+hsa-miR-423-5p\n\
+hsa-miR-106b-3p\n\
+hsa-miR-143-3p\n\
+hsa-miR-125a-5p\n\
+hsa-let-7e-5p\n\
+hsa-miR-941\n\
+hsa-let-7d-5p\n\
+hsa-miR-196a-5p\n\
+hsa-miR-125b-5p\n\
+hsa-miR-374b-5p\n\
+hsa-miR-221-3p\n\
+hsa-miR-29a-3p\n\
+hsa-miR-30e-3p\n\
+hsa-miR-532-5p\n\
+hsa-miR-30b-5p\n\
+hsa-miR-27a-5p\n\
+hsa-miR-615-3p\n\
+hsa-miR-7-5p\n\
+hsa-miR-192-5p\n\
+hsa-miR-675-5p\n\
+hsa-miR-197-3p\n\
+hsa-miR-340-5p\n\
+hsa-miR-1260b\n\
+hsa-miR-16-5p\n\
+hsa-miR-28-3p\n\
+hsa-miR-361-3p\n\
+hsa-miR-101-3p\n\
+hsa-miR-181a-5p\n\
+hsa-miR-1260a\n\
+hsa-miR-374a-5p\n\
+hsa-miR-185-5p\n\
+hsa-miR-22-3p\n\
+hsa-miR-199b-3p\n\
+hsa-miR-378c\n\
+hsa-miR-199a-3p\n\
+hsa-miR-181b-5p\n\
+hsa-miR-320a\n\
+hsa-miR-744-5p\n\
+hsa-let-7d-3p\n\
+hsa-miR-374a-3p\n\
+hsa-miR-199a-5p\n\
+hsa-miR-1180-3p\n\
+hsa-miR-126-3p\n\
+hsa-miR-484\n\
+hsa-miR-23b-3p\n\
+hsa-miR-96-5p\n\
+hsa-miR-335-3p\n\
+hsa-miR-193b-3p\n\
+hsa-miR-582-5p\n\
+hsa-miR-224-5p\n\
+hsa-miR-19b-3p\n\
+hsa-miR-95-3p\n\
+hsa-miR-32-5p\n\
+hsa-miR-450b-5p\n\
+hsa-miR-26b-5p\n\
+hsa-miR-99b-3p\n\
+hsa-miR-15b-5p\n\
+hsa-miR-151a-5p\n\
+hsa-miR-29b-3p\n\
+hsa-miR-365a-3p\n\
+hsa-miR-181a-2-3p\n\
+hsa-miR-30c-2-3p\n\
+hsa-miR-651-5p\n\
+hsa-miR-365b-3p\n\
+hsa-let-7f-2-3p\n\
+hsa-miR-629-5p\n\
+hsa-miR-200c-3p\n\
+hsa-miR-15b-3p",
         validators=[validators.InputRequired()])
