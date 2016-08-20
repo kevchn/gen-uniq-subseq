@@ -21,7 +21,7 @@ def comp(a, b, c):
                 flag_motif_unique = True
                 motif_set.add(motif)
             index_5p += 1
-        pos = "pos:" + str(index_5p+1) + "-" + str(index_5p+11)
+        pos = "pos:" + str(index_5p) + "-" + str(index_5p+10)
         if record.id in mirna_set: # check if db mirna is one in user input
             results.append(">" + record.id + " " + motif + " " + pos)
             results.append(record.seq.back_transcribe())
