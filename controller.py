@@ -1,6 +1,6 @@
 from model import InputForm
 from flask import Flask, render_template, request, Response
-from compute import comp
+from compute import unpack_to_set, generate_unique_subsequences
 import csv, io, os
 
 app = Flask(__name__)
@@ -9,8 +9,9 @@ app = Flask(__name__)
 def index():
     form = InputForm(request.form)
     if request.method == 'POST' and form.validate():
-        result = comp(form.index_5p.data, form.motif_size.data,
-                      form.mirna_list)
+        result = generate_unique_subsequences(form.index_5p_begin.data,
+                                              form.motif_size.data,
+                                              unpack_to_set(form.mirna_list))
     else:
         result = None
 

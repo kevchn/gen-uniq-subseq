@@ -1,7 +1,7 @@
 from wtforms import Form, IntegerField, TextAreaField, validators
 
 class InputForm(Form):
-    index_5p = IntegerField(
+    index_5p_begin = IntegerField(
         label='5p Index (1-based)', default=3,
         validators=[validators.InputRequired()])
     motif_size = IntegerField(
