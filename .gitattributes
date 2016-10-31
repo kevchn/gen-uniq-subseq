@@ -1,2 +1,2 @@
-templates/*.html linguist-vendored
-static/css/*.css linguist-vendored
+templates/* linguist-vendored
+static/css/* linguist-vendored
